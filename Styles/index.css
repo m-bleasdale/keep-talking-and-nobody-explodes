@@ -1,0 +1,45 @@
+@font-face{
+    font-family: digital;
+    src: url(Fonts/digital-7.ttf);
+}
+
+h1{
+    font-family: digital;
+    font-size: 90px;
+    margin-bottom: 1vh;
+}
+
+form{
+    font-family: 'Trebuchet MS';
+}
+
+input[type=submit]{
+    margin-top: 3vh;
+    font-size: 50px;
+}
+
+input[type=submit]{
+    margin-top: 3vh;
+    font-size: 50px;
+}
+
+h2{
+    font-family: 'Trebuchet MS';
+}
+
+p{
+    font-family: 'Trebuchet MS';
+}
+
+a{
+    font-family: 'Trebuchet MS';
+}
+
+#info{
+    margin-top: 4vh;
+    font-family: 'Trebuchet MS';
+}
+
+hr.solid{
+    border-top: 3px solid black;
+}

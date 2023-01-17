@@ -1,0 +1,391 @@
+@font-face{
+    font-family: digital;
+    src: url(Fonts/digital-7.ttf);
+}
+
+:root{
+    --darker-gray: #1d1d1d;
+}
+
+#serialNumber{
+    font-size: 40px;
+    margin-bottom: 1%;
+}
+
+.table1{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: 40vh 40vh;
+    background-color: gray;
+    padding: 10px;
+}
+
+.slot{
+    border: 1px solid black;    
+    background-color: lightgray;
+}
+
+.light{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 100%;
+}
+
+#off{
+    background-color: red;
+}
+
+#on{
+    background-color: green;
+}
+
+/* Top panel */
+
+.topPanel{
+    display: flex;
+    justify-content: space-between;
+    background-color: darkgray;
+    border: 2px solid black;
+}
+
+#serialNumber{
+    background-color: lightgray;
+    padding: 1vh;
+    margin-left: 1vh;
+    font-size: 7vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#serialNumber span{
+    font-size: 4.5vh;
+}
+
+#batteries{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.battery{
+    width: 2vw;
+    height: 7vw;
+    background-color: var(--darker-gray);
+}
+
+.battery div{
+    background-color: goldenrod;
+    color: black;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.indicatorContainer{
+    background-color: darkred;
+    display: flex;
+    padding: 1vh;
+    height: 6.5vh;
+    border: 2px solid black;
+    margin-top: 4vh;
+}
+
+#indicatorLight{
+    background-color: white;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 100%;
+    border: 0.5vh solid black;
+}
+
+#indicator{
+    margin: 0;
+    font-size: 4.5vh;
+    background-color: lightgray;
+    padding: 1vh;
+    line-height: 4.5vh;
+    border: 2px solid black;
+    font-family: 'Trebuchet MS';
+}
+
+.timeStrike{
+    background-color: gray;
+    padding: 1vh;
+    border: 2px solid black;
+    height: 100%;
+}
+
+.timeStrike p{
+    margin: 0;
+    background-color: darkgreen;
+    border: 2px solid black;
+    width: 8.5vw;
+}
+
+#strikes{
+    height: 5vh;
+    color: darkred;
+    font-weight: bold;
+    padding: 0.5vh;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5vw;
+}
+
+#time{
+    padding: 0.5vh;
+    font-family: digital;
+    font-size: 4vw;
+}
+
+/* Wire */
+
+#wireSlot{
+    display: flex;
+    flex-direction: column;
+}
+
+#wireContainer{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wire{
+    margin: 2% 0px 2%;
+    height: 3vh;
+    border: 1px solid black;
+}
+
+.cutwire{
+    width: 50%;
+
+    margin: 2% 0px 2%;
+    height: 3vh;
+    border: 1px solid black;
+}
+
+/* Button */
+
+#buttonSlot{
+    display: flex;
+    justify-content: space-between
+}
+
+#buttonContainer{
+    height: 30vh;
+    width: 30vh;
+
+    border-radius: 100%;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2%;
+
+    box-shadow: 2%;
+}
+
+#pressedButton{
+    height: 30vh;
+    width: 30vh;
+
+    border-radius: 100%;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2%;
+
+    filter: brightness(85%);
+}
+
+#buttonText{
+    font-size: 4.5vh;
+    background-color: white;
+    padding: 2%;
+    font-family: 'Trebuchet MS';
+}
+
+#stripContainer{
+    height: 30vh;
+    width: 10vh;
+
+    border: 1px solid black;
+
+    margin: 2% 2% 0px;
+}
+
+/* Keypad */
+
+#keypadSlot .light{
+    position: absolute;
+}
+
+#keypadContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#keys{
+    display: inline-grid;
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    grid-gap: 0.5vh;
+}
+
+.keypadButton{
+    border: 1px solid black;
+    background-color: darkgray;
+    height: 18vh;
+    width: 18vh;
+}
+
+.pressedKeypadButton{
+    border: 1px solid black;
+    background-color: gray;
+    height: 18vh;
+    width: 18vh;
+}
+
+/* Simon Says */
+
+#simonSaysSlot .light{
+    position: absolute;
+}
+
+#simonSaysContainer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 8vh;
+}
+
+#simonSaysStart{
+    font-size: 4vh;
+    margin: 0;
+    font-family: Helvetica;
+    float: right;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    background-color: darkgreen;
+    color: white;
+    padding: 1vh;
+    border-radius: 100%;
+}
+
+#simonSaysButtons{
+    display: inline-grid;
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    transform:rotate(45deg);
+    align-items: center;
+    justify-content: center;
+}
+
+.simonSaysButton{
+    width: 12vh;
+    height: 12vh;
+}
+
+/* Who's on first */
+
+#whosOnFirstSlot .light{
+    position: absolute;
+}
+
+#WOFContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#WOFElementsContainer{
+    margin-top: 2vh;
+    font-family: Helvetica;
+}
+
+#WOFDisplay{
+    background-color: black;
+    color: white;
+    font-size: 4vh;
+    padding: 1vh;
+    text-align: center;
+    width: calc(20vw + 2vh);
+    border: 4px solid black;
+    margin: 0;
+}
+
+#WOFButtonContainer{
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    width: 20vw;
+}
+
+.WOFButton{
+    background-color: white;
+    width: 10vw;
+    font-size: 4vh;
+    text-align: center;
+    padding: 1vh;
+    border: 2px solid black;
+}
+
+/* Memory */
+
+#memorySlot .light{
+    position: absolute;
+}
+
+#memoryContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#memoryElementsContainer{
+    margin-top: 2vh;
+}
+
+#memoryDisplay{
+    background-color: darkgreen;
+    font-family: digital;
+    color: black;
+    font-size: 10vh;
+    padding: 1vh;
+    text-align: center;
+    border: 4px solid black;
+    margin: 0;
+}
+
+#memoryStageCount{
+    background-color: darkgreen;
+    margin: 0;
+    border: 4px solid black;
+    font-size: 4vh;
+    font-family: digital;
+}
+
+#memoryStageCount span{
+    color: darkred;
+}
+
+#memoryButtonContainer{
+    display: flex;
+}
+
+.memoryButton{
+    background-color: grey;
+    font-size: 4vh;
+    width: 5vw;
+    text-align: center;
+    padding: 1vh;
+    border: 2px solid black;
+    font-family: Helvetica;
+}

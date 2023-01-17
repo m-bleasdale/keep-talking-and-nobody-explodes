@@ -1,0 +1,51 @@
+
+<head>
+    <title>Keep Talking and Nobody Explodes</title>
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+    
+    <h1>Keep Talking and Nobody Explodes</h1>
+    <h2>V0.1</h2>
+
+    <p>A small project based on the game <a href="https://keeptalkinggame.com/">Keep Talking and Nobody Explodes</a>. Credit for the concept goes to Steel Crate Games, Inc.</p>
+
+    <a href="https://www.bombmanual.com/">Click here for the bomb Bomb Defusal Manual.</a>
+
+    <script type="text/javascript">
+
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.get('fail') == 'true'){
+            document.write('<h1 id="failMessage">You failed</h1>');
+        }
+
+    </script>
+
+    <h2>Customise Bomb</h2>
+
+    <form action="bomb.html" method="get">
+        <label for="time">Time (seconds):</label>
+        <input type="text" name="time">
+        <br>
+        <input type="submit" value="Launch Game">
+    </form>
+
+    <hr class="solid">
+
+    <div id="info">
+        <p>This was just a side project so I only added 6 moddules, new modules and additional customisation features coming soon. Existing bomb modules are:</p>
+        <ul>
+            <li>Wires</li>
+            <li>The Button</li>
+            <li>Keypads</li>
+            <li>Simon Says</li>
+            <li>Who's on First</li>
+            <li>Memory</li>
+        </ul>
+        
+        <p>Thanks for playing!</p>
+    </div>
+    
+
+</body>
+</html>
