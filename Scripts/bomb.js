@@ -469,6 +469,35 @@ class bomb {
 
                 return finalHTML + `</div></div></div></div>`;
 
+            },
+
+            morseCode(){
+
+                function randomKey(){
+                    const keys = Object.keys(bombConfig.morseCodeWords);
+                    return keys[Math.floor(Math.random() * keys.length)];
+                }
+
+                const randomWord = bombConfig.morseCodeWords[randomKey()];
+                bombConfig.morseCodeWordSelected = randomWord;
+
+                return `
+                <div id="morseCodeSlot">
+                    <span class="light" id="off"></span>
+                    <div id="morseCodeContainer">
+                        <div id="morseOutput"></div>
+                        <div id="controlContainer">
+                            <div id="frequencyContainer">
+                                <div id="frequencyDown" onclick="playerActions.morseCode.frequency.decrease()"></div>
+                                <div id="frequencyOutput">3.505</div>
+                                <div id="frequencyUp" onclick="playerActions.morseCode.frequency.increase()"></div>
+                            </div>
+                            <div id="frequencySubmit" onclick="playerActions.morseCode.send()">SEND</div>
+                        </div>
+                    </div>
+                </div>
+                `
+
             }
 
         };

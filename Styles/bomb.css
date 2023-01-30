@@ -389,3 +389,73 @@
     border: 2px solid black;
     font-family: Helvetica;
 }
+
+/* Morse Code */
+
+#morseCodeSlot .light{
+    position: absolute;
+}
+
+#morseCodeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#morseOutput{
+    margin-top: 4vh;
+    width: 5vh;
+    height: 5vh;
+    background-color: #1d1d1d;
+    border-radius: 100%;
+    border: 0.5vh solid black;
+}
+
+#controlContainer{
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    margin-top: 4vh;
+}
+
+#frequencyContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#frequencyOutput{
+    background-color: darkgreen;
+    margin: 0 0.5vw 0 0.5vw;
+    border: 4px solid black;
+    font-size: 4vh;
+    font-family: digital;
+    padding: 1vh;
+
+    width: 4vw;
+    text-align: center;
+
+}
+
+#frequencyUp{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3.5vh 0 3.5vh 3.5vh;
+    border-color: transparent transparent transparent red;    
+}
+
+#frequencyDown{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3.5vh 3.5vh 3.5vh 0;
+    border-color: transparent red transparent transparent;    
+}
+
+#frequencySubmit{
+    font-family: Helvetica;
+    text-align: center;
+    border: 2px solid black;
+    background-color: darkred;
+    font-size: 3vh;
+}

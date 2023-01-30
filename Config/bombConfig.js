@@ -130,6 +130,90 @@ const bombConfig = {
         },
 
 
+    },
+
+    morseCodeWordSelected: undefined,
+    morseCodeWords: {
+
+        'shell': {
+            code: Array.from('... .... . .-.. .-..'),
+            responseFrequency: '3.505'
+        },
+
+        'halls': {
+            code: Array.from('.... .- .-.. .-.. ...'),
+            responseFrequency: '3.515'
+        },
+
+        'slick': {
+            code: Array.from('... .-.. .. -.-. -.-'),
+            responseFrequency: '3.522'
+        },
+
+        'trick': {
+            code: Array.from('- .-. .. -.-. -.-'),
+            responseFrequency: '3.532'
+        },
+
+        'boxes': {
+            code: Array.from('-... --- -..- . ...'),
+            responseFrequency: '3.535'
+        },
+
+        'leaks': {
+            code: Array.from('.-.. . .- -.- ...'),
+            responseFrequency: '3.542'
+        },
+
+        'strobe': {
+            code: Array.from('... - .-. --- -... .'),
+            responseFrequency: '3.545'
+        },
+
+        'bistro': {
+            code: Array.from('-... .. ... - .-. ---'),
+            responseFrequency: '3.552'
+        },
+
+        'flick': {
+            code: Array.from('..-. .-.. .. -.-. -.-'),
+            responseFrequency: '3.555'
+        },
+
+        'bombs': {
+            code: Array.from('-... --- -- -... ...'),
+            responseFrequency: '3.565'
+        },
+
+        'break': {
+            code: Array.from('-... .-. . .- -.-'),
+            responseFrequency: '3.572'
+        },
+
+        'brick': {
+            code: Array.from('-... .-. .. -.-. -.-'),
+            responseFrequency: '3.575'
+        },
+
+        'steak': {
+            code: Array.from('... - . .- -.-'),
+            responseFrequency: '3.582'
+        },
+
+        'sting': {
+            code: Array.from('... - .. -. --.'),
+            responseFrequency: '3.592'
+        },
+
+        'vector': {
+            code: Array.from('...- . -.-. - --- .-.'),
+            responseFrequency: '3.595'
+        },
+
+        'beats': {
+            code: Array.from('-... . .- - ...'),
+            responseFrequency: '3.600'
+        }
     }
 
 }

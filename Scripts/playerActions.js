@@ -399,6 +399,61 @@ var playerActions = {
 
         }
 
+    },
+
+    morseCode:{
+
+        frequency:{
+            
+            frequencyIndex: 0,
+            morseValues: Object.values(bombConfig.morseCodeWords),
+
+            increase(){
+
+                if(this.frequencyIndex < this.morseValues.length - 1) this.frequencyIndex += 1;
+                else this.frequencyIndex = 0;
+
+                document.getElementById('frequencyOutput').innerHTML = this.morseValues[this.frequencyIndex].responseFrequency;
+
+            },
+
+            decrease(){
+
+                if(this.frequencyIndex != 0){ 
+                    console.log('+1');
+                    this.frequencyIndex -= 1
+                }
+                else {
+                    console.log('lenght');
+                    this.frequencyIndex = this.morseValues.length - 1;
+                };
+
+                document.getElementById('frequencyOutput').innerHTML = this.morseValues[this.frequencyIndex].responseFrequency;
+                
+            }
+
+        },
+
+        lockInput(){
+
+            document.getElementById('frequencyUp').removeAttribute('onclick');
+            document.getElementById('frequencyDown').removeAttribute('onclick');
+            document.getElementById('frequencySubmit').removeAttribute('onclick');
+
+        },
+
+        send(){
+
+            if(bombConfig.morseCodeWordSelected.responseFrequency == document.getElementById('frequencyOutput').innerHTML){
+                this.lockInput();
+                gameActions.rightAction('morseCode');
+            }
+            else{
+                gameActions.wrongAction();
+            }
+
+        }
+
     }
 
 }
