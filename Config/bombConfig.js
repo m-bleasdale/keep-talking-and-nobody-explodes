@@ -2,6 +2,7 @@ const bombConfig = {
 
     defaultTime: 150,
     time: undefined,
+    modules: ['wires', 'keypad', 'button', 'simonSays', 'whosOnFirst', 'memory', 'morseCode'],
 
     serialNumberVowels: ["A", "E", "I", "U"],
     serialNumberConsonants: ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Z"],

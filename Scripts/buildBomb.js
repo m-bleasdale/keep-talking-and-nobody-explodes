@@ -44,9 +44,25 @@ function initialiseTimer(){
     document.getElementById('time').innerHTML = `${mins}:${seconds}`;
 }
 
+function selectModules(){
+
+    let modules = [];
+    let count = 0;
+    while(count < 6){
+        const module = bombConfig.modules[Math.floor(Math.random() * bombConfig.modules.length)];
+        if(!modules.includes(module)){
+            modules.push(module);
+            count += 1;
+        }
+    }
+
+    return modules;
+
+}
+
 window.onload = (event) => {
 
-    const desiredModules = ['wires', 'keypad', 'button', 'simonSays', 'whosOnFirst', 'memory'];
+    const desiredModules = selectModules();
     Bomb = new bomb(desiredModules);
 
     
@@ -55,4 +71,6 @@ window.onload = (event) => {
     timer.initialiseTimeRemaining();
     outputHTML();
     timer.start(0);
+    gameActions.play.morseCode();
+
 };
